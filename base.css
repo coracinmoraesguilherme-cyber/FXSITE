@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #162342; /* Cor azul escura de fundo */
+    color: #ffffff;
+    padding-top: 70px; /* Evita que a navbar fixa tape o conteúdo */
+    overflow-x: hidden;
+}
+
+/* NAVBAR FIXA */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    background-color: #031226;
+    box-shadow: 0 4px 10px rgba(60, 156, 219, 0.2);
+}
+
+.logo {
+    height: 45px;
+    width: auto;
+}
+
+.nav-btns {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-btn {
+    text-decoration: none;
+    color: #38bdf8;
+    font-weight: bold;
+    padding: 8px 16px;
+    transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+    opacity: 0.8;
+}
+/* rodape */
+.rodape {
+    z-index: 1;
+    width: 100%;
+    height: 180px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+    background-color: #031226;
+    color: #38bdf8;
+    box-shadow: 0 4px 10px rgba(60, 156, 219, 0.2);
+}
+.rodape h1 {
+    font-size: 35px;
+    text-decoration-line: underline ;
+}
+.rodape a {
+    color: #30a9dd;
+}
+#objetofoIMG {
+    text-align: center;
+    margin-top: 2%;
+    left: 5%;
+    width: 35%;
+}
+
+.objetofoTEXT {
+    text-align: center;
+    width: 35%;
+}
+#objetoforeserved {
+    font-size: medium;
+    position: absolute;
+    right: 2%;
+    margin-top: 8%;
+}
+/* Container principal (necessário para o absolute do tooltip funcionar) */
+.minitext {
+    position: relative;
+    cursor: pointer;
+}
+
+/* O Tooltip em si */
+.minitext::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background-color: #031226;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 140%;
+    font-weight: 400;
+    white-space: nowrap;
+    border: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    opacity: 1;
+    visibility: hidden;
+    transition: all 0.1s ease;
+    pointer-events: none; /* Evita que o mouse interfira no tooltip */
+    z-index: 100;
+}
+
+/* Animação e exibição ao passar o mouse */
+.minitext:hover::after {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(-15px);
+}
+
+
+.obsoleto {
+    color: red
+}
+.obsoleto:hover {
+    opacity: 0.8;
+    
+}

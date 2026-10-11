@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>FXSMP | Alterar senha</title>
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+    <header class="navbar">
+        <img src="FXSMP.png" alt="logo" class="logo">
+        <nav class="nav-btns">
+            <a href="index.html" class="nav-btn">Home</a>
+            <a href="form.html" class="nav-btn">Form</a>
+            <a href="disc.html" class="nav-btn">Comunidade</a>
+            <a href="Staff.html" class="nav-btn">Staff</a>
+        </nav>
+    </header>
+
+    <main class="page centro">
+        <form class="card" id="f">
+            <h1>Alterar senha</h1>
+            <div class="aviso" id="aviso" hidden>Você está usando uma senha provisória. Defina uma nova senha para continuar.</div>
+            <p class="sub">Use 12 ou mais caracteres. Uma frase longa é melhor que uma senha curta e complicada.</p>
+            <label for="atual">Senha atual</label>
+            <input type="password" id="atual" autocomplete="current-password" required>
+            <label for="nova">Nova senha</label>
+            <input type="password" id="nova" autocomplete="new-password" required>
+            <label for="conf">Repetir nova senha</label>
+            <input type="password" id="conf" autocomplete="new-password" required>
+            <button type="submit" class="btn-p" id="salvar">Salvar nova senha</button>
+            <div class="erro" id="erro" role="alert" aria-live="polite"></div>
+            <a href="painel.html" class="voltar" id="voltar">← Voltar ao painel</a>
+        </form>
+    </main>
+    <script src="js/api.js"></script>
+    <script src="js/senha.js"></script>
+</body>
+</html>

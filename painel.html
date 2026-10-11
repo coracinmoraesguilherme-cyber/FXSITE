@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>FXSMP | Painel da Staff</title>
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+    <header class="navbar">
+        <img src="FXSMP.png" alt="logo" class="logo">
+        <nav class="nav-btns">
+            <a href="index.html" class="nav-btn">Home</a>
+            <a href="form.html" class="nav-btn">Form</a>
+            <a href="disc.html" class="nav-btn">Comunidade</a>
+            <a href="Staff.html" class="nav-btn">Staff</a>
+        </nav>
+    </header>
+
+    <main class="page">
+        <section class="card largo">
+            <h1>Olá, <span id="nome"></span></h1>
+            <p class="sub">Painel da staff do FXSMP. Escolha o que quer fazer.</p>
+            <div class="menu">
+                <a class="item" href="Staffperfil.html"><b>Editar meu perfil</b><span>Personalize abas, blocos, cores, música e galeria.</span></a>
+                <a class="item" id="ver" href="Staffperfil.html"><b>Ver como visitante</b><span>Veja o seu perfil do jeito que o público vê.</span></a>
+                <a class="item" href="staff.html"><b>Equipe</b><span>Lista pública com o perfil de todos da staff.</span></a>
+                <a class="item" href="senha.html"><b>Alterar senha</b><span>Troque a sua senha de acesso.</span></a>
+                <a class="item adm" id="adm" href="contas.html" hidden><b>Gerenciar contas</b><span>Criar contas de staff, resetar senhas e desativar acessos.</span></a>
+                <button type="button" class="item" id="sair"><b>Sair</b><span>Encerrar a sessão neste aparelho.</span></button>
+            </div>
+        </section>
+    </main>
+    <script src="js/api.js"></script>
+    <script src="js/painel.js"></script>
+</body>
+</html>
