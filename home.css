@@ -1,0 +1,246 @@
+body{
+    background-color: #0d2040;
+    color: #38bdf8;
+    font-weight: bold;
+    z-index: 4;
+}
+h1 {
+    font-size: 45px;
+}
+p {
+    font-size: 20px;
+}
+#boxsite {
+    margin-left: 2.5%;
+    border: 20px;
+    width: 94%;
+    background-color: #162342;
+    border-radius: 20px;
+}
+
+
+/* CONTAINER PRINCIPAL DA HERO SECTION */
+.main-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: calc(100vh - 190px);
+    overflow: hidden;
+    background-color: #162342;
+}
+
+/* ÁREA DA IMAGEM COM O CORTE DIAGONAL */
+.main-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 65%;
+    height: 100%;
+    /* Recorta a área da imagem em diagonal */
+    clip-path: polygon(0 0, 100% 0, 65% 100%, 0 100%);
+    z-index: 1;
+}
+
+/* A Faixa Azul que Acompanha a Linha Diagonal */
+.main-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #0d2040; /* Azul médio da borda */
+    clip-path: polygon(100% 0, 96% 0, 61% 100%, 65% 100%);
+    z-index: 3;
+}
+
+/* A Imagem em si */
+.fundo1 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 20px;
+    border-color: #0d2040;
+}
+
+/* Gradiente de opacidade/escurecimento sobre a imagem */
+.banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg, 
+        rgba(22, 35, 66, 0.1) 0%, 
+        rgba(22, 35, 66, 0.7) 70%, 
+        #162342 100%
+    );
+    z-index: 2;
+}
+
+/* CAIXA DE TEXTO (POSICIONADA À DIREITA) */
+.main-text {
+    position: relative;
+    z-index: 10;
+    margin-left: auto; /* Joga a caixa de texto para a direita */
+    width: 40%;
+    padding-right: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.main-text h1 {
+    font-size: 3.5rem;
+    line-height: 1;
+    font-weight: 800;
+    color: #38bdf8;
+}
+
+.main-text p {
+    font-size: 1.25rem;
+    color: #cbd5e1;
+}
+#btn-main-alinhamento {
+    width: 40%;
+    position: relative;
+}
+.btn-primary {
+    display: inline-block;
+    align-self: flex-start;
+    padding: 12px 30px;
+    border: 2px solid #38bdf8;
+    color: #38bdf8;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    background: rgba(56, 189, 248, 0.05);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: #38bdf8;
+    color: #031226;
+    box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
+    transform: translateY(-2px);
+}
+
+
+
+/* Container Principal */
+.mainbody {
+    margin: 40px auto; /* Centraliza a caixa automaticamente */
+    padding: 40px; /* Espaçamento interno em vez de altura fixa */
+    border-radius: 20px;
+    width: 100%;
+    max-width: 1400px; /* Impede que fique demasiado largo em ecrãs gigantes */
+    background-color: #0d2040;
+    border-radius: 20px;
+}
+
+/* Estrutura das Linhas da Galeria usando Flexbox */
+.galeria-row {
+    display: flex;
+    align-items: center; /* Centraliza a imagem e o texto verticalmente */
+    justify-content: space-between;
+    gap: 40px; /* Espaçamento entre a imagem e o texto */
+    margin-bottom: 60px; /* Espaço entre as diferentes linhas da galeria */
+    background-color: #031226;
+    border-radius: 20px;
+}
+
+/* Inverte a ordem para a Linha 2 (Texto na esquerda, Imagem na direita) */
+.galeria-row.reverse {
+    flex-direction: row-reverse;
+    text-align: right;
+}
+
+/* Contentor da Imagem */
+.galeria-img {
+    flex: 1; /* Ocupa metade do espaço disponível */
+    max-width: 50%; /* Garante que a imagem não passa de metade do ecrã */
+}
+
+.galeria-img img {
+    width: 100%;
+    height: 300px; /* Pode ajustar esta altura como preferir */
+    object-fit: cover; /* Corta a imagem perfeitamente sem a esticar */
+    display: block; /* Remove espaços em branco extra debaixo da imagem */
+}
+
+/* A Barra Azul (feita com bordas!) */
+.img-left {
+    border-right: 6px solid #38bdf8;
+}
+
+.img-right {
+    border-left: 6px solid #38bdf8;
+}
+
+/* Área de Texto */
+.galeria-text {
+    flex: 1; /* Ocupa a outra metade do espaço */
+    color: #ffffff;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+
+/* Seção do Vídeo */
+.video-section {
+    margin: 40px auto;
+    padding: 40px;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 900px; /* Um pouco mais estreito para manter a elegância do vídeo */
+    background-color: #0d2040;
+    text-align: center;
+}
+
+.video-section h2 {
+    color: #38bdf8;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.video-section p {
+    color: #cbd5e1;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+.channel-link {
+    color: #38bdf8;
+    text-decoration: none;
+    font-weight: bold;
+    padding-bottom: 2px;
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.channel-link:hover {
+    color: #ffffff;
+    border-bottom: 1px solid #ffffff;
+}
+
+/* Truque para deixar o iFrame do YouTube 100% responsivo (Proporção 16:9) */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* Mantém a proporção de 16:9 */
+    height: 0;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    border: 2px solid #38bdf8; /* Borda azul clara combinando com o tema */
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}

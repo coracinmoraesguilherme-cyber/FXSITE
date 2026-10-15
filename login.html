@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https:; media-src 'self' https:; frame-src https://open.spotify.com https://www.youtube.com https://www.youtube-nocookie.com; connect-src 'self' https://*.supabase.co; base-uri 'none'; form-action 'self'; object-src 'none'">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>FXSMP | Entrar</title>
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+    <header class="navbar">
+        <img src="FXSMP.png" alt="logo" class="logo">
+        <nav class="nav-btns">
+            <a href="index.html" class="nav-btn">Home</a>
+            <a href="form.html" class="nav-btn">Form</a>
+            <a href="disc.html" class="nav-btn">Comunidade</a>
+            <a href="Staff.html" class="nav-btn">Staff</a>
+        </nav>
+    </header>
+
+    <main class="page centro">
+        <section class="card">
+            <h1>Área da Staff</h1>
+            <form id="f1">
+                <p class="sub">Digite o e-mail autorizado pela administração. Enviaremos um código de acesso — não há senha.</p>
+                <label for="email">E-mail</label>
+                <input type="text" id="email" name="email" inputmode="email" autocomplete="email" autocapitalize="none" spellcheck="false" required>
+                <div id="cf"></div>
+                <button type="submit" class="btn-p" id="enviar">Enviar código</button>
+            </form>
+            <form id="f2" hidden>
+                <p class="sub" id="aviso2"></p>
+                <label for="codigo">Código recebido por e-mail</label>
+                <input type="text" id="codigo" name="codigo" inputmode="numeric" autocomplete="one-time-code" maxlength="10" required>
+                <button type="submit" class="btn-p" id="entrar">Entrar</button>
+                <button type="button" class="btn-s" id="reenviar" style="margin-top:12px">Enviar outro código</button>
+                <button type="button" class="btn-s" id="trocar" style="margin-top:12px">Usar outro e-mail</button>
+            </form>
+            <div class="erro" id="erro" role="alert" aria-live="polite"></div>
+            <a href="index.html" class="voltar">← Voltar para a Home</a>
+        </section>
+    </main>
+    <script src="js/config.js"></script>
+    <script src="vendor/supabase.js"></script>
+    <script src="js/supa.js"></script>
+    <script src="js/login.js"></script>
+</body>
+</html>
