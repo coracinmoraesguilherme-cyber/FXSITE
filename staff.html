@@ -7,6 +7,7 @@
     <title>FXSMP Staffs</title>
     <link rel="stylesheet" href="base.css">
     <link rel="stylesheet" href="css/auth.css">
+    <link rel="stylesheet" href="css/staff.css">
 </head>
 <body>
 
@@ -17,13 +18,16 @@
             <a href="index.html" class="nav-btn">Home</a>
             <a href="form.html" class="nav-btn">Form</a>
             <a href="disc.html" class="nav-btn">Comunidade</a>
-            <a href="Staff.html" class="nav-btn">Staff</a>
+            <a href="staff.html" class="nav-btn">Staff</a>
         </nav>
     </header>
 
-    <main class="grade" id="grade">
+    <main class="equipe">
         <h1>Staff</h1>
         <p class="sub">Conheça quem faz o FXSMP acontecer.</p>
+        <input type="search" id="busca" class="busca" placeholder="Buscar por nome ou usuário..." aria-label="Buscar na equipe" autocomplete="off">
+        <div id="hier" aria-live="polite"></div>
+        <p class="vazio-busca" id="vazio-busca" hidden>Ninguém encontrado com esse nome.</p>
     </main>
 
     <!-- rodapé do site -->
@@ -61,6 +65,7 @@
     <script src="js/config.js"></script>
     <script src="vendor/supabase.js"></script>
     <script src="js/supa.js"></script>
+    <script src="js/cargos.js"></script>
     <script src="js/staff.js"></script>
 </body>
 </html>

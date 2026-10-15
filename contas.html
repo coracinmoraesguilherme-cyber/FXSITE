@@ -16,7 +16,7 @@
             <a href="index.html" class="nav-btn">Home</a>
             <a href="form.html" class="nav-btn">Form</a>
             <a href="disc.html" class="nav-btn">Comunidade</a>
-            <a href="Staff.html" class="nav-btn">Staff</a>
+            <a href="staff.html" class="nav-btn">Staff</a>
         </nav>
     </header>
 
@@ -29,17 +29,19 @@
                 <div><label for="email">E-mail</label><input type="text" id="email" inputmode="email" autocomplete="off" autocapitalize="none" spellcheck="false" required></div>
                 <div><label for="slug">Usuário público (a-z, 0-9, _ . -)</label><input type="text" id="slug" autocomplete="off" autocapitalize="none" spellcheck="false" required></div>
                 <div><label for="nome">Nome no perfil</label><input type="text" id="nome" autocomplete="off" maxlength="40" required></div>
+                <div><label for="cargo">Cargo</label><select id="cargo"></select></div>
                 <button type="submit" class="btn-p" id="criar">Autorizar</button>
             </form>
             <div class="erro" id="erro" role="alert" aria-live="polite"></div>
             <h2>Contas</h2>
-            <table class="tab"><thead><tr><th>E-mail</th><th>Usuário</th><th>Nome</th><th>Situação</th><th>Ações</th></tr></thead><tbody id="lista"></tbody></table>
+            <table class="tab"><thead><tr><th>E-mail</th><th>Usuário</th><th>Nome</th><th>Cargo</th><th>Situação</th><th>Ações</th></tr></thead><tbody id="lista"></tbody></table>
             <a href="painel.html" class="voltar">← Voltar ao painel</a>
         </section>
     </main>
     <script src="js/config.js"></script>
     <script src="vendor/supabase.js"></script>
     <script src="js/supa.js"></script>
+    <script src="js/cargos.js"></script>
     <script src="js/contas.js"></script>
 </body>
 </html>

@@ -39,7 +39,7 @@ button:disabled { opacity: .5; cursor: wait; }
 .tag.v { background: #052e1a; color: #4ade80; }
 .tag.x { background: #3b0a0a; color: #f87171; }
 .tag.a { background: #3b2a05; color: #fcd34d; }
-.novo { display: grid; grid-template-columns: 1.4fr 1fr 1fr auto; gap: 12px; align-items: end; }
+.novo { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr auto; gap: 12px; align-items: end; }
 .novo .btn-p { margin-top: 0; width: auto; }
 .senhabox { margin-top: 16px; background: #052e1a; border: 1px solid #166534; border-radius: 10px; padding: 14px; }
 .senhabox code { display: block; font: 700 20px Consolas, monospace; color: #4ade80; margin: 8px 0; letter-spacing: 1px; word-break: break-all; }
@@ -58,3 +58,6 @@ button:disabled { opacity: .5; cursor: wait; }
 .scard span { color: #c5d3e6; font-size: 14px; line-height: 1.4; display: block; }
 
 [hidden] { display: none !important; }
+
+.card select { padding: 9px 10px; border-radius: 8px; border: 1px solid #1f3a5f; background: #0b1a33; color: #fff; font-size: 14px; width: 100%; }
+.tab select { width: auto; }
